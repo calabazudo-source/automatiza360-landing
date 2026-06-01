@@ -46,7 +46,7 @@
   /* Espaciados */
   --section-py:     7rem;
   --section-py-sm:  4rem;
-  --container:      min(1800px, 92vw);
+  --container:      min(2400px, 92vw);
   --container-px:   2rem;
 
   /* Bordes y radios */
