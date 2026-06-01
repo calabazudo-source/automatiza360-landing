@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Start-Sleep -Seconds 3; \\(Invoke-WebRequest -Uri \"http://localhost:5173\" -UseBasicParsing -TimeoutSec 5\\).StatusCode)",
+      "PowerShell($gitPaths = @\\(\"C:\\\\Program Files\\\\Git\\\\bin\\\\git.exe\", \"C:\\\\Program Files \\(x86\\)\\\\Git\\\\bin\\\\git.exe\", \"$env:LOCALAPPDATA\\\\Programs\\\\Git\\\\bin\\\\git.exe\"\\); foreach \\($p in $gitPaths\\) { if \\(Test-Path $p\\) { Write-Output \"Found: $p\" } })",
+      "PowerShell(winget *)",
+      "PowerShell(Start-Process -FilePath \"$env:USERPROFILE\\\\Downloads\\\\Git-2.54.0-64-bit.exe\" -ArgumentList \"/VERYSILENT /NORESTART /NOCANCEL /SP- /CLOSEAPPLICATIONS /RESTARTAPPLICATIONS /COMPONENTS=icons,ext\\\\reg\\\\shellhere,assoc,assoc_sh\" -Verb RunAs -Wait; Write-Output \"Instalacion completada\")",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\", \"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\", \"User\"\\); & \"C:\\\\Program Files\\\\Git\\\\bin\\\\git.exe\" --version)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\", \"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\", \"User\"\\); cd \"C:\\\\Dropbox\\\\Claude\\\\claude_code_curso\\\\Tema_02_Adicional\\\\proyecto_01\"; & \"C:\\\\Program Files\\\\Git\\\\bin\\\\git.exe\" init; & \"C:\\\\Program Files\\\\Git\\\\bin\\\\git.exe\" add src/index.css; & \"C:\\\\Program Files\\\\Git\\\\bin\\\\git.exe\" commit -m \"fix: aumentar container a min\\(1800px, 92vw\\) para monitores grandes\")",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\", \"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\", \"User\"\\); cd \"C:\\\\Dropbox\\\\Claude\\\\claude_code_curso\\\\Tema_02_Adicional\\\\proyecto_01\"; & \"C:\\\\Program Files\\\\Git\\\\bin\\\\git.exe\" status --short | Select-Object -First 30)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\", \"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\", \"User\"\\); cd \"C:\\\\Dropbox\\\\Claude\\\\claude_code_curso\\\\Tema_02_Adicional\\\\proyecto_01\"; & \"C:\\\\Program Files\\\\Git\\\\bin\\\\git.exe\" add .; & \"C:\\\\Program Files\\\\Git\\\\bin\\\\git.exe\" status --short)"
+    ]
+  }
+}
